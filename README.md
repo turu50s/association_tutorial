@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # association_tutorial
+# association_tutorial
