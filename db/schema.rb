@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_01_17_212254) do
 
-  create_table "favorits", force: :cascade do |t|
+  create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
     t.integer "tweet_id"
     t.datetime "created_at", null: false
