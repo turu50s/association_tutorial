@@ -1,11 +1,9 @@
-<h1>Tweets#show</h1>
-<p>Find me in app/views/tweets/show.html.erb</p>
+<h1>ツイート</h1>
 
 <p><span>email     : </span><%= @user.email %></p>
-<p><span>ツイート内容: < /span><%= @tweet.body %></p>
+<p><span>ツイート内容: </span><%= @tweet.body %></p>
 
 <hr>
-<p>コメント内容: </p>
 <%= form_for([@tweet, @comment]) do |f| %>
   <p>
     <%= f.label :body, "コメント" %>
@@ -15,6 +13,9 @@
 <% end %>
 
 <hr>
-<% @tweet.comments.each do |comment| %>
-  <p><%= comment.body %></p>
-<% end %>
+<p>コメント数: <%= @tweet.comments.count %></p>
+<div>
+  <% @tweet.comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+</div>
